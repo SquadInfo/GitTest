@@ -9,8 +9,8 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-
 import com.example.foodplaza.model.Food;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -44,7 +44,7 @@ public final class FoodListAdapter extends RecyclerView.Adapter<FoodListAdapter.
         foodViewHolder.ratingBar.setRating(food.getFoodRating());
 //        foodViewHolder.foodImageView.setImageBitmap();
 
-//        Picasso.get().load(food.getFoodImageUrl()).into(foodViewHolder.foodImageView);
+        Picasso.get().load(food.getFoodImageUrl()).into(foodViewHolder.foodImageView);
 
     }
 

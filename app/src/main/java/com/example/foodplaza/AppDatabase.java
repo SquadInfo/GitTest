@@ -1,4 +1,4 @@
-package com.example.foodplaza.db;
+package com.example.foodplaza;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
@@ -7,9 +7,9 @@ import android.content.Context;
 
 import com.example.foodplaza.dao.FoodDao;
 import com.example.foodplaza.model.Food;
+import com.example.foodplaza.model.Order;
 
-
-@Database(entities = {Food.class},version = 1,exportSchema = false)
+@Database(entities = {Food.class, Order.class},version = 1,exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase
 {
     private static volatile AppDatabase INSTANCE;

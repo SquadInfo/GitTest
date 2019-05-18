@@ -1,24 +1,21 @@
 package com.example.foodplaza;
 
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.foodplaza.databinding.ActivityMainBinding;
 import com.example.foodplaza.model.Food;
 import com.example.foodplaza.viewmodel.FoodViewModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     FoodViewModel viewModel;
 ActivityMainBinding binding;
@@ -40,14 +37,23 @@ ActivityMainBinding binding;
             }
         });
 
-        binding.floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,InsertFoodActivity.class));
-            }
-        });
+        binding.refreshFloatinfButton.setOnClickListener(this);
+        binding.addFoodFloatinfButton.setOnClickListener(this);
 
 
+    }
 
+    @Override
+    public void onClick(View v) {
+switch (v.getId())
+{
+    case R.id.refreshFloatinfButton:
+
+        break;
+
+    case R.id.addFoodFloatinfButton:
+        startActivity(new Intent(MainActivity.this,InsertFoodActivity.class));
+        break;
+}
     }
 }

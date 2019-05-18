@@ -4,8 +4,8 @@ import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 
+import com.example.foodplaza.AppDatabase;
 import com.example.foodplaza.dao.FoodDao;
-import com.example.foodplaza.db.AppDatabase;
 import com.example.foodplaza.model.Food;
 
 import java.util.List;
