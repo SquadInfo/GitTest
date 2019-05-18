@@ -1,0 +1,55 @@
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".InsertFoodActivity">
+
+<EditText
+    android:id="@+id/food_Name_Edit_Text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Food name"
+    android:layout_marginTop="20dp"/>
+<EditText
+    android:id="@+id/food_Category_Edit_Text"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:hint="Enter category"
+    android:layout_height="wrap_content" />
+<EditText
+    android:id="@+id/food_Price_Edit_Text"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:hint="Enter Food price"
+    android:inputType="numberDecimal"
+    android:layout_height="wrap_content" />
+<EditText
+    android:id="@+id/food_Rating_Edit_Text"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:hint="Enter Food rating"
+    android:inputType="number"
+    android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/add_Button"
+        android:text="Add"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/list_Button"
+        android:text="SHOW LIST"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+</layout>
